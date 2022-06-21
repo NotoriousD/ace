@@ -1,0 +1,37 @@
+.home{
+  &__grid{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &.reverse{
+      .home__item{
+        width: 39%;
+        &:nth-child(2n){
+          width: 61%;
+        }
+      }
+    }
+  }
+  &__item{
+    position: relative;
+    height: calc(min(624px,48.75vw));
+    width: 61%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:nth-child(2n){
+      width: 39%;
+    }
+    img{
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

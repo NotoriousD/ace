@@ -1,4 +1,5 @@
 @import "_mixins/font-face";
 
-@include font-face("roboto-example", "../fonts/RobotoRegular/RobotoRegular");
-@include font-face("roboto-example", "../fonts/RobotoBold/RobotoBold", bold);
+@include font-face("Formular", "../fonts/Formular/Formular");
+@include font-face("Formular", "../fonts/Formular/Formular-Medium", 500);
+@include font-face("Formular", "../fonts/Formular/Formular-Bold", 700);

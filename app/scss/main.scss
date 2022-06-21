@@ -19,6 +19,15 @@ body {
 	font-family: $default-font;
 	overflow-x: hidden;
 	color: $text;
+	font-weight: 400;
+	a{
+		color: $text;
+		text-decoration: none;
+		&:hover{
+			transition: $transition;
+			color: $color-hover;
+		}
+	}
 	input, textarea {
 		border: #666 1px solid;
 		outline: none;
@@ -48,6 +57,19 @@ b, strong {
 	font-weight: bold;
 }
 
+.container-big{
+	max-width: 1920px;
+	margin: 0 auto;
+}
 
+.container{
+	max-width: 1270px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
 
+@import "parts/header";
+@import "parts/hero";
+@import "parts/home";
+@import "parts/footer";
 @import "media"; // Always at the end

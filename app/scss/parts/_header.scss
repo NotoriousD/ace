@@ -1,0 +1,28 @@
+.header{
+  &__sab-menu{
+    display: none;
+  }
+  &__in{
+    padding: 11px 0;
+  }
+  &__left{
+
+  }
+  a{
+    font-size: 12px;
+    font-weight: 400;
+  }
+  nav > ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    li{
+      margin-inline-end: 20px;
+      &:last-child{
+        margin-inline-end: 0px;
+      }
+    }
+  }
+}
