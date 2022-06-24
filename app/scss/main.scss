@@ -38,6 +38,11 @@ body {
 			border-color: green;
 		}
 	}
+	ul{
+		li{
+			line-height: 1;
+		}
+	}
 }
 
 .img-responsive {
@@ -68,8 +73,37 @@ b, strong {
 	padding: 0 15px;
 }
 
+.page__logo{
+	position: absolute;
+	left: 50%;
+	top: 90px;
+	transform: translate(-50%,0%);
+	z-index: 10;
+	pointer-events: none;
+	@media(max-width: $small){
+    display: none;
+  }
+}
+
+.padding-top{
+	padding-top: 45px;
+}
+
+.padding-bottom{
+	padding-bottom: 110px;
+}
+
+
+html.fixed{
+	overflow: hidden;
+}
+
 @import "parts/header";
 @import "parts/hero";
 @import "parts/home";
+@import "parts/catalog";
+@import "parts/sides";
+@import "parts/contacts-page";
+@import "parts/franchase-page";
 @import "parts/footer";
 @import "media"; // Always at the end

@@ -34,4 +34,28 @@
       height: 100%;
     }
   }
+  @media(max-width: $tablet){
+    &__grid{
+      flex-direction: column;
+      &.reverse{
+        .home__item{
+          width: 100%;
+          min-height: 468px;
+          &:nth-child(2n){
+            width: 100%;
+            height: auto;
+            min-height: 300px;
+          }
+        }
+      }
+    }
+    &__item{
+      width: 100%;
+      min-height: 300px;
+      &:nth-child(2n){
+        width: 100%;
+        min-height: 468px;
+      }
+    }
+  }
 }
