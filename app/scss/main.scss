@@ -1,10 +1,111 @@
 @import "vars";
 @import "fonts";
 @import "libs";
-@import "common";
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+
+body {
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.65;
+	font-family: $default-font;
+	overflow-x: hidden;
+	color: $text;
+	font-weight: 400;
+	a{
+		color: $text;
+		text-decoration: none;
+		&:hover{
+			transition: $transition;
+			color: $color-hover;
+		}
+	}
+	input, textarea {
+		border: #666 1px solid;
+		outline: none;
+		&:focus:required:invalid {
+			border-color: red;
+		}
+		&:required:valid {
+			border-color: green;
+		}
+	}
+	ul{
+		li{
+			line-height: 1;
+		}
+	}
+}
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	&.img-width {
+		width: 100%;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+b, strong {
+	font-weight: bold;
+}
+
+.container-big{
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+.container{
+	max-width: 1270px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.page__logo{
+	position: absolute;
+	left: 50%;
+	top: 90px;
+	transform: translate(-50%,0%);
+	z-index: 10;
+	pointer-events: none;
+	@media(max-width: $small){
+    display: none;
+  }
+}
+
+.padding-top{
+	padding-top: 45px;
+}
+
+.padding-bottom{
+	padding-bottom: 110px;
+}
+
+
+html.fixed{
+	overflow: hidden;
+}
 
 @import "parts/header";
 @import "parts/hero";
 @import "parts/home";
+@import "parts/catalog";
+@import "parts/sides";
+@import "parts/contacts-page";
+@import "parts/franchase-page";
+@import "parts/about-page";
+@import "parts/address-page";
 @import "parts/footer";
 @import "media"; // Always at the end
