@@ -1,5 +1,10 @@
 .catalog{
   position: relative;
+  @media(max-width: $small){
+    .page__logo{
+      display: none;
+    }
+  }
   &__in{
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -9,7 +14,12 @@
       grid-template-columns: repeat(2,1fr);
     }
     @media(max-width: $phone){
-      grid-template-columns: 1fr;
+      display: none;
+    }
+  }
+  &__in-mobile{
+    @media(min-width: $phone){
+      display: none;
     }
   }
   &__item{
@@ -62,5 +72,98 @@
     right: 6px;
     top: 50%;
     transform: translateY(-50%);
+  }
+  &__mobile-item{
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+    &:hover{
+      .catalog__mobile-item-bottom{
+        background-color: $text;
+        color: $white;
+      }
+    }
+  }
+  &__mobile-item-img{
+    position: relative;
+    .img{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 562px;
+      img{
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  &__mobile-color{
+    position: absolute;
+    left: 0;
+    top: 0;
+    flex-direction: column;
+    z-index: 3;
+    pointer-events: none;
+    span{
+      display: block;
+      width: 24px;
+      height: 24px;
+      display: block;
+      background-color: $white;
+      &.black{
+        background-color: $text;
+      }
+      &.white{
+        background-color: $white;
+      }
+    }
+  }
+  &__mobile-item-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 21px 30px;
+    transition: $transition;
+    span{
+      font-size: 12px;
+      display: block;
+      &:first-child{
+        width: 70%;
+      }
+      &:last-child{
+        width: 30%;
+        text-align: right;
+      }
+    }
+  }
+
+  .swiper-product-paggination{
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    .swiper-pagination-bullet{
+      width: 24px;
+      height: 2px;
+      background-color: $white;
+      transition: $transition;
+      border-radius: 0;
+      opacity: 1;
+    }
+    .swiper-pagination-bullet.swiper-pagination-bullet-active{
+      background-color: $text;
+    }
   }
 }

@@ -80,8 +80,12 @@ b, strong {
 	transform: translate(-50%,0%);
 	z-index: 10;
 	pointer-events: none;
-	@media(max-width: $small){
-    display: none;
+	@media(max-width: $tablet){
+    svg{
+			path{
+				fill: $white;
+			}
+		}
   }
 }
 
@@ -98,6 +102,37 @@ html.fixed{
 	overflow: hidden;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+border: 1px solid $border-input;
+-webkit-text-fill-color: $text;
+transition: background-color 5000s ease-in-out 0s;
+}
+
+.btn{
+	padding: 10px;
+	width: 100%;
+	background-color: $text;
+	color: $white;
+	font-size: 12px;
+	text-decoration: none;
+	outline: none!important;
+	appearance: none!important;
+	transition: $transition;
+	border: 2px solid $text;
+	&:hover{
+		background-color: $white;
+		color: $text;
+	}
+}
+
 @import "parts/header";
 @import "parts/hero";
 @import "parts/home";
@@ -106,6 +141,8 @@ html.fixed{
 @import "parts/contacts-page";
 @import "parts/franchase-page";
 @import "parts/about-page";
+@import "parts/vacancies";
 @import "parts/address-page";
+
 @import "parts/footer";
 @import "media"; // Always at the end

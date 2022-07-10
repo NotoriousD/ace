@@ -5,6 +5,86 @@
   width: 100%;
   z-index: 100;
   background-color: $white;
+  &__search-line{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: $white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 49px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -999;
+    pointer-events: none;
+    transition: all .1s linear;
+    &.active{
+      z-index: 10;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+       .header__search-form{
+        transform: translateX(0);
+       }
+    }
+  }
+  &__search-form{
+    margin-inline-end: 200px;
+    position: relative;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 15px 10px;
+    background-color: $white;
+    transform: translateX(-20px);
+    transition: $transition;
+    label{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      border-left: 1px solid $color-border;
+      border-right: 1px solid $color-border;
+      z-index: 0;
+      transition: $transition;
+    }
+   
+    input{
+      border: none;
+      border-bottom: 1px solid $color-border;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      width: 100%;
+      display: block;
+      padding-right: 60px;
+      position: relative;
+      transition: $transition;
+      &::placeholder{
+        color: $color-border;
+      }
+    }
+    input:focus,input:not(:placeholder-shown),input:not(:empty){
+      border-color: $text;
+    }
+    input:focus+label, 
+    input:not(:placeholder-shown)+label, 
+    input:not(:empty)+label{
+      border-color: $text;
+    }
+    .cancel-search{
+      position: absolute;
+      display: block;
+      right: 10px;
+      top: 50%;
+      transform: translate(0%,-50%);
+    }
+  }
   &__mobile-left{
     display: none;
     align-items: center;
@@ -128,8 +208,14 @@
   &__like{
     margin-inline-end: 20px;
   }
-  &__search-form{
-    display: none;
+  .like-btn{
+    &.liked{
+      svg{
+        path{
+          fill: $text;
+        }
+      }
+    }
   }
   .mobile__menu{
     position: fixed;
@@ -230,6 +316,36 @@
       &:last-child{
         transform: translate(-50%,-50%) rotate(45deg);
       }
+    }
+  }
+  &__mobile-box{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    @media(max-width: $small){
+      display: flex;
+    }
+  }
+  .basket-btn{
+    position: relative;
+    span{
+      position: absolute;
+      right: -5px;
+      top: -5px;
+      width: 17px;
+      height: 17px;
+      background-color: $white;
+      border-radius: 50%;
+      border: 1px solid $text;
+      color: $text;
+      font-size: 8px;
+      line-height: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      pointer-events: none;
     }
   }
 }

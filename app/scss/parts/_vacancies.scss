@@ -1,0 +1,171 @@
+.vacancies-page{
+  .vacancies-list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-family: $default-font;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 20px 0;
+    li{
+      margin-bottom: 5px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+  .vacancies__get{
+    margin: 30px 0;
+  }
+  .vacancies__form-title{
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 12px;
+  }
+  .vacancies__form{
+    position: relative;
+    background-color: $white;
+    padding: 40px 70px 20px 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .form__group{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    max-width: 250px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    label{
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translate(0, -50%);
+      font-weight: 400;
+      font-size: 12px;
+      color: $text;
+      line-height: 1;
+      pointer-events: none;
+      transition: $transition;
+    }
+    input{
+      width: 100%;
+      min-width: 250px;
+      max-width: 250px;
+      padding: 10px 20px;
+      border: 1px solid $border-input;
+      font-weight: 400;
+      font-size: 12px;
+      color: $text;
+      line-height: 1;
+      font-family: $default-font;
+    }
+    input[type="file"]{
+      visibility: hidden;
+      opacity: 0;
+      z-index: -9999;
+      width: 0;
+      height: 0;
+      display: none;
+    }
+    .select2-container{
+      width: 100%!important;
+    }
+    .select2-container--default .select2-selection--single{
+      border: 1px solid $border-input;
+      border-radius: 0;
+      font-size: 12px;
+      color: $text;
+      padding: 10px 20px;
+      line-height: 1;
+    }
+    .select2-container .select2-selection--single{
+      height: auto;
+    }
+    .select2-container .select2-selection--single .select2-selection__rendered{
+      padding: 0 ;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__rendered{
+      line-height: 1;
+    }
+    .select2-container.select2-container--open .select2-selection--single .select2-selection__arrow{
+      transform: translate(0,-50%) rotate(180deg);
+    }
+    .select2-container--default .select2-selection--single .select2-selection__arrow{
+      width: 10px;
+      height: 6px;
+      right: 10px;
+      top: 50%;
+      transform: translate(0,-50%);
+      b{
+        display: block;
+        border: none;
+        width: 10px;
+        height: 6px;
+        background-image: url(../img/icons/select-arrow.svg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+        left: auto;
+        top: auto;
+        position: relative;
+      }
+    }
+    .select2-results__option{
+      padding: 8px 20px;
+      font-size: 12px;
+      font-weight: 400;
+      transition: $transition;
+    }
+    .select2-dropdown{
+      border-color: $border-input;
+    }
+    .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable{
+      background-color: $border-input;
+      color: $text;
+    }
+    .select2-container--default .select2-results__option--selected{
+      background-color: #dcdcdc;
+    }
+  }
+  .form__group input:focus+label, 
+  .form__group input:not(:placeholder-shown)+label, 
+  .form__group input:not(:empty)+label{
+    top: 0;
+    background-color: $white;
+    font-size: 8px;
+  }
+  .form__group-file{
+    margin-bottom: 16px;
+    label{
+      position: relative;
+      left: auto;
+      top: auto;
+      transform: none;
+      pointer-events: all;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      line-height: 1;
+      svg{
+        margin-right: 10px;
+      }
+    }
+  }
+  @media(max-width: $tablet){
+    .sides__left{
+      height: auto;
+      padding: 30px 0;
+    }
+    .page__logo{
+      display: none;
+    }
+  }
+}
+

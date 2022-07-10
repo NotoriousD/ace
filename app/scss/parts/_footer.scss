@@ -31,4 +31,33 @@
       line-height: 12px;
     }
   }
+  @media(max-width: $tablet){
+    &__in{
+      flex-direction: column-reverse;
+    }
+    &__copy{
+      width: 100%;
+      text-align: center;
+      margin-right: 0;
+    }
+    &__menu{
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    ul{
+      // flex-direction: column;
+      li{
+        margin-right: 10px;
+        margin-bottom: 5px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  @media(max-width: $small){
+    &__menu{
+      display: none;
+    }
+  }
 }

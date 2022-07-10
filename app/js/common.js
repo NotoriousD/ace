@@ -17,4 +17,17 @@ $(function() {
 
 	// header menu styles end
 
+	// header search start
+
+	$(".open-search").click(function(e){
+		e.preventDefault();
+		$(".header__search-line").toggleClass("active");
+	})
+
+	$(".cancel-search").click(function(e){
+		e.preventDefault();
+		$(".header__search-line").removeClass("active");
+	})
+	// header search end
+
 });
