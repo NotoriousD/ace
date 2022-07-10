@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+    <!-- <base href="/"> -->
+
+    <title>ACE</title>
+    <meta name="description" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Template Basic Images Start -->
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="icon" href="img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+    <!-- Template Basic Images End -->
+
+    <!-- Custom Browsers Color Start -->
+    <meta name="theme-color" content="#000">
+    <!-- Custom Browsers Color End -->
+
+    <link rel="stylesheet" href="css/payment.min.css">
+
+</head>
+
+<body>
+<main>
+    <div class="checkout-container">
+        <div class="cc-column">
+            <h2>Платежные реквизиты</h2>
+            <form>
+                <div class="payment-row">
+                    <label>
+                        <input type="text" placeholder="Имя *">
+                    </label>
+                    <label>
+                        <input type="text" placeholder="Фамилия *">
+                    </label>
+                </div>
+                <div class="payment-row">
+                    <label>
+                        <input type="text" placeholder="Компания">
+                    </label>
+                </div>
+                <h3>Страна/регион</h3>
+                <div class="payment-row">
+                    <label class="select">
+                        <select>
+                            <option>Украина</option>
+                            <option>Польша</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="payment-row">
+                    <label>
+                        <input type="text" placeholder="Номер дома и название улицы">
+                    </label>
+                </div>
+                <div class="payment-row">
+                    <label>
+                        <input type="text" placeholder="Квартира, и т.д">
+                    </label>
+                </div>
+                <div class="payment-row">
+                    <label class="select">
+                        <select>
+                            <option value="">Город</option>
+                            <option>Киев</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="payment-row">
+                    <label>
+                        <input type="text" placeholder="ZIP *">
+                    </label>
+                </div>
+                <div class="payment-row">
+                    <label>
+                        <input type="text" placeholder="Телефон *">
+                    </label>
+                </div>
+                <div class="payment-row">
+                    <label>
+                        <input type="email" placeholder="Адрес электронной почты *">
+                    </label>
+                </div>
+            </form>
+        </div>
+        <div class="cc-column">
+            <h2>Ваш заказ</h2>
+            <div class="order-row">
+                <div class="order-detail">Продукт</div>
+                <div class="order-detail">Итого по продукту</div>
+            </div>
+            <div class="order-row">
+                <div class="order-detail">Красная толстовка x1</div>
+                <div class="order-detail price">$15.00</div>
+            </div>
+            <div class="order-row">
+                <div class="order-detail">Промежуточный итог</div>
+                <div class="order-detail price">$15.00</div>
+            </div>
+            <div class="order-row">
+                <div class="order-detail">Общее</div>
+                <div class="order-detail price">$15.00</div>
+            </div>
+
+            <div class="payment-methods">
+                <label class="payment-method">
+                    <span class="payment-method-row">
+                        <span class="payment-radio">
+                            <input type="radio" name="payment_method" value="direct">
+                            <span></span>
+                        </span>
+                        <span>Прямой банковский перевод</span>
+                    </span>
+                    <span>
+                        Произведите оплату непосредственно на наш банковский счет. пожалуйста, используйте свой <br>
+                        Закажите iD в качестве ссылки на платеж. Ваш заказ не будет отправлен, пока средства не будут очищены на нашем счете.
+                    </span>
+                </label>
+                <label class="payment-method">
+                    <span class="payment-method-row">
+                        <span class="payment-radio">
+                            <input type="radio" name="payment_method" value="Paypal">
+                            <span></span>
+                        </span>
+                        <span>PayPal</span>
+                    </span>
+                </label>
+            </div>
+
+            <div class="confirm-order">
+                <p>
+                    Ваши личные данные будут использоваться для обработки вашего заказа, поддержки вашего опыта на этом веб-сайте и для других целей, описанных в нашей
+                    <a href="#">политике конфиденциальности</a>.
+                </p>
+                <button>Сделать заказ</button>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
