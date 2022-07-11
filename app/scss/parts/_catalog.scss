@@ -5,6 +5,15 @@
       display: none;
     }
   }
+  &__category-title{
+    padding: 19px 15px;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 19px;
+    color: $text;
+    margin-bottom: 0;
+    text-align: center;
+  }
   &__in{
     display: grid;
     grid-template-columns: repeat(4,1fr);
