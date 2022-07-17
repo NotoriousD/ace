@@ -173,7 +173,7 @@
       }
       &:hover{
         border-bottom: 1px solid $text;
-        .header__sab-menu{
+        .sub-menu{
           display: flex;
           opacity: 1;
           visibility: visible;
@@ -242,6 +242,11 @@
         visibility: visible;
       }
     }
+    &-top-lang{
+      width: 100px;
+      display: flex;
+      justify-content: space-between;
+    }
     &-in{
       margin: 0 auto;
       max-width: 600px;
@@ -262,26 +267,58 @@
       align-items: center;
       border-bottom: 1px solid $color-border;
     }
-    &-new{
-      display: flex;
-      justify-content: center;
-      padding: 19px 24px;
-      border-bottom: 1px solid $color-border;
-    }
     &-type-top{
-      display: flex;
-      justify-content: space-between;
-      border-bottom: 1px solid $color-border;
-      a{
+      ul{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        border-bottom: 1px solid $color-border;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      li{
         display: block;
-        width: 50%;
-        padding: 19px 24px;
+        width: 50%;  
         text-align: center;
         border-right: 1px solid $color-border;
-        &:nth-child(2n){
-          border-color: transparent;
+        border-bottom: 1px solid $color-border;
+        &:nth-child(3n + 1){
+          width: 100%;
         }
       }
+      li > a{
+        padding: 19px 24px;
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+      .sub-menu{
+        display: none;
+      }
+    }
+    &-default.hidden{
+      display: none;
+    }
+    &-secondary{
+      display: none;
+      position: relative;
+      &.active{
+        display: block;
+      }
+    }
+    .rall-back{
+      position: absolute;
+      left: 50%;
+      top: 20px;
+      outline: none!important;
+      border: none;
+      appearance: none!important;
+      background-color: transparent;
+      padding: 0;
+      margin: 0;
+      transform: translateX(-50%);
+      cursor: pointer;
     }
     &-child{
       padding: 100px 24px;
@@ -295,6 +332,14 @@
           &:last-child{
             margin-bottom: 0;
           }
+        }
+      }
+    }
+    &-copy-container{
+      ul{
+        display: none;
+        &.active{
+          display: block;
         }
       }
     }
