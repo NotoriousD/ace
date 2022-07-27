@@ -24,12 +24,14 @@
     font-size: 12px;
   }
   .vacancies__form{
-    position: relative;
-    background-color: $white;
-    padding: 40px 70px 20px 70px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    form{
+      position: relative;
+      background-color: $white;
+      padding: 40px 70px 20px 70px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
   .form__group{
     position: relative;
@@ -166,6 +168,52 @@
     .page__logo{
       display: none;
     }
+  }
+  .wpcf7-form-control-wrap{
+    position: initial;
+  }
+  .wpcf7-not-valid-tip{
+    position: absolute;
+    font-size: 10px;
+    font-weight: 400;
+    color: red;
+    top: 101%;
+  }
+  .wpcf7 form .wpcf7-response-output{
+    max-width: 250px;
+    font-size: 10px;
+    line-height: 1.1em;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  .wpcf7 .wpcf7-form.sent .wpcf7-response-output{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    padding: 40px;
+    font-weight: 500;
+    text-align: center;
+    max-width: 100%;
+    background-color: #ffffff;
+    animation: hidethankyou 5s normal forwards ease-in-out;
+  }
+}
+
+@keyframes hidethankyou{
+  from{
+    visibility: visible;
+    pointer-events: all;
+  }
+  to{
+    visibility: hidden;
+    pointer-events: none;
   }
 }
 

@@ -29,6 +29,7 @@
   &__left{
     width: 50%;
     min-height: 576px;
+    max-height: 700px;
     height: calc(100vh - 156px);
     position: relative;
     display: flex;

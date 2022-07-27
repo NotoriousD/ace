@@ -54,10 +54,10 @@ gulp.task('scripts', function() {
 
 gulp.task('product-scripts', function() {
 	return gulp.src([
-		'app/libs/jquery/dist/jquery.min.js',
+		// 'app/libs/jquery/dist/jquery.min.js',
 		'node_modules/@glidejs/glide/dist/glide.min.js',
 		'app/js/product.js',
-		'app/js/common.js', // Always at the end
+		// 'app/js/common.js', // Always at the end
 	])
 		.pipe(concat('product.min.js'))
 		.pipe(uglify({ output: { comments: false } }))

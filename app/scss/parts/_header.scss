@@ -208,6 +208,44 @@
   &__like{
     margin-inline-end: 20px;
   }
+  &__lang{
+    position: relative;
+    &:hover{
+      ul{
+        opacity: 1;
+        visibility: visible;
+        max-height: 150px;
+      }
+    }
+    a{
+      padding: 4px;
+      text-transform: uppercase;
+      font-size: 12px;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid transparent;
+      transition: $transition;
+      &:hover{
+        border-color: $black;
+      }
+    }
+    ul{
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      max-height: 0;
+      overflow: hidden;
+      transition: $transition;
+      left: 0;
+      top: 101%;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      background-color: $white;
+    }
+  }
   .like-btn{
     &.liked{
       svg{
@@ -243,9 +281,24 @@
       }
     }
     &-top-lang{
-      width: 100px;
       display: flex;
       justify-content: space-between;
+      .wpml-ls{
+        padding: 0;
+      }
+      ul{
+        display: flex;
+        justify-content: center;
+        a{
+          padding: 0 15px;
+          color: #C4C4C4;
+        }
+        .wpml-ls-current-language{
+          a{
+            color: $black;
+          }
+        }
+      }
     }
     &-in{
       margin: 0 auto;
@@ -391,6 +444,13 @@
       align-items: center;
       overflow: hidden;
       pointer-events: none;
+    }
+  }
+  .chengable-active{
+    .menu-item:not(.current-mobile-menu-item){
+      a{
+        color: #C4C4C4;
+      }
     }
   }
 }

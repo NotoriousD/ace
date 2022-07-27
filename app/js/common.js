@@ -39,6 +39,8 @@ $(function() {
 
 	$(".mobile__li-tracker.menu-item-has-children > a").click(function(e){
 			e.preventDefault();
+			$(".header__chengable-menu").addClass("chengable-active");
+			$(this).parent().addClass("current-mobile-menu-item").siblings().removeClass("current-mobile-menu-item");
 			$(".mobile__menu-default").addClass("hidden");
 			$(".mobile__menu-secondary").addClass("active");
 			$(`[data-copy-item="${$(this).parent().index()}"]`).addClass("active").siblings().removeClass("active");
@@ -46,10 +48,23 @@ $(function() {
 
 	$(".rall-back").click(function(e){
 		e.preventDefault();
+		$(".header__chengable-menu").removeClass("chengable-active");
+		$(".current-mobile-menu-item").removeClass("current-mobile-menu-item");
 		$(".mobile__menu-default").removeClass("hidden");
 		$(".mobile__menu-secondary").removeClass("active");
 		$(".mobile__menu-copy-container ul").removeClass("active");
 	});
+
+	// custom lang switcher
+
+	let currentLang = document.querySelector(".wpml-ls-current-language a");
+  !!currentLang ? $(".header__lang-current").html(currentLang.cloneNode(true)) : '';
+
+  if(!!$((".wpml-ls-item:not(.wpml-ls-current-language)"))){
+    document.querySelectorAll(".wpml-ls-item:not(.wpml-ls-current-language)").forEach(item => {
+      $(".header__lang-list").append(item.cloneNode(true));
+    })
+  }
 
 
 });
