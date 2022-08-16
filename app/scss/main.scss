@@ -140,6 +140,7 @@ transition: background-color 5000s ease-in-out 0s;
 	height: 100vh;
 }
 
+@import "parts/global";
 @import "parts/header";
 @import "parts/hero";
 @import "parts/home";
@@ -150,6 +151,6 @@ transition: background-color 5000s ease-in-out 0s;
 @import "parts/about-page";
 @import "parts/vacancies";
 @import "parts/address-page";
-
+@import "parts/checkout-page";
 @import "parts/footer";
 @import "media"; // Always at the end

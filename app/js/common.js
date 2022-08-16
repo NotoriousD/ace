@@ -67,4 +67,73 @@ $(function() {
   }
 
 
+	let productSlide = document.querySelector(".product__slider");
+
+	const swiperproduct = new Swiper(productSlide, {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		loop: true,
+		zoom: {
+			maxRatio: 5,
+		},
+		navigation: {
+			nextEl: '.product-next-arrow',
+			prevEl: '.product-prev-arrow',
+		},
+		pagination: {
+			el: '.swiper-product-pagination',
+			clickable: true,
+		},
+		breakpoints: {
+			// when window width is >= 320px
+			320: {
+				slidesPerView: 1,
+			},
+			// when window width is >= 480px
+			480: {
+				slidesPerView: 2,
+				spaceBetween: 2,
+			},
+			// when window width is >= 640px
+			640: {
+				slidesPerView: 3,
+				spaceBetween: 2,
+			},
+			880: {
+				slidesPerView: 1,
+			}
+		}
+	})
+
+	$('.btn-test-hook').click( function(e) { 
+		e.preventDefault();
+		const PRODUCT_DATA = JSON.parse($(this).attr("data-product"));
+	
+		console.log(PRODUCT_DATA[0]);
+	
+		const galleyImages = PRODUCT_DATA[0]?.variation_gallery_images;
+	
+		let items =  galleyImages.map(item =>{
+			return `<div class="swiper-slide">
+								<div class="product__image-item">
+									<img src="${item.src}" alt="${item.alt}">
+								</div>
+							</div>`
+		})
+	
+		let outputSlider = `
+				<div class="product__slider-wrapper swiper-wrapper">
+					${items}
+				</div>
+		`;
+		$('.product__slider').html(outputSlider);
+		swiperproduct.update();
+	});
+
+
+	$(".pa-value:not(.pa-value-not-stock),.pr-value").on("click", function(){
+		$(this).addClass("active").siblings().removeClass("active");
+	});
+
+
 });

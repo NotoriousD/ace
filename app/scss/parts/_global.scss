@@ -1,0 +1,17 @@
+.woocommerce{
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.woocommerce-input-wrapper{
+  .input-text{
+    padding: 13px 20px;
+    color: $black;
+    font-size: 12px;
+    line-height: 1.1em;
+    border: 1px solid #F5F5F5;
+    resize: none!important;
+    &::placeholder{
+      color: #C4C4C4;
+    }
+  }
+}
