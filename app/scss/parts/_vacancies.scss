@@ -159,6 +159,18 @@
         margin-right: 10px;
       }
     }
+    .img-add{
+      background-image: url(../img/icons/add-icon.svg);
+      width: 24px;
+      height: 24px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-right: 10px;
+    }
+    .wpcf7-not-valid-tip{
+      top: 60%;
+    }
   }
   @media(max-width: $tablet){
     .sides__left{

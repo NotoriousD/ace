@@ -40,9 +40,18 @@
         </div>
         <div class="cp-column">
             <div class="mobile-colors">
-                <div style="background: #F5F5F5;"></div>
-                <div style="background: #FFFFFF;border: 1px solid #F5F5F5;"></div>
-                <div style="background: #000000;"></div>
+                <div class="product__radio">
+                    <input type="radio" name="attribute_pa_color" id="pa-color1">
+                    <label for="pa-color1" title="" class="pa-value" style="background:#F5F5F5;"> </label>
+                </div>
+                <div class="product__radio">
+                    <input type="radio" name="attribute_pa_color" id="pa-color2">
+                    <label for="pa-color2" title="" class="pa-value" style="background: #FFFFFF;"> </label>
+                </div>
+                <div class="product__radio">
+                    <input type="radio" name="attribute_pa_color" id="pa-color3">
+                    <label for="pa-color3" title="" class="pa-value" style="background: 000000;"> </label>
+                </div>
             </div>
             <div class="add-to-favorite mobile"></div>
             <div class="mobile-sizes">
@@ -134,85 +143,124 @@
                 </div>
             </div>
 
-            <div class="product-attr">
-                <div class="pa-title">Цвет</div>
-                <div class="pa-values">
-                    <div class="pa-colors">
-                        <div class="pa-value" style="background: #F5F5F5;"></div>
-                        <div class="pa-value" style="background: #FFFFFF;border: 1px solid #F5F5F5;"></div>
-                        <div class="pa-value" style="background: #000000;"></div>
+            <form action="" class="form-variables">
+                <div class="product-attr">
+                    <div class="pa-title">Цвет</div>
+                    <div class="pa-values">
+                        <div class="pa-colors">
+                            <div class="product__radio">
+                                
+                                <label  title="" class="pa-value"> 
+                                    <input type="radio" name="attribute_pa_color" id="pa-color1" value="1">
+                                    <span class="pa-preview"  style="background:#F5F5F5;"></span>
+                                </label>
+                            </div>
+                            <div class="product__radio">
+                                
+                                <label  title="" class="pa-value" > 
+                                    <input type="radio" name="attribute_pa_color" value="2" id="pa-color2">
+                                    <span class="pa-preview" style="background: #FFFFFF;"></span>
+                                </label>
+                            </div>
+                            <div class="product__radio">
+                                
+                                <label  title="" class="pa-value" > 
+                                    <input type="radio" name="attribute_pa_color" value="3" id="pa-color3">
+                                    <span class="pa-preview" style="background: #000000;"></span>
+                                </label>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div class="product-attr">
+                    <div class="pa-title">Размер</div>
+                    <div class="pa-sizes">
+                        <div class="pa-values">
+                            <label  title="" class="pa-value" > 
+                                <input type="radio" name="attribute_pa_size" id="pa-size1" value="L">
+                                <span>L</span>
+                            </label>
+                            <label  title="" class="pa-value" > 
+                                <input type="radio" name="attribute_pa_size" id="pa-size2" value="M">
+                                <span>M</span>
+                            </label>
+                            <label  title="" class="pa-value" > 
+                                <input type="radio" name="attribute_pa_size" id="pa-size3" value="S">
+                                <span>S</span>
+                            </label>
+                            <label  title="" class="pa-value epmty-stock" > 
+                                <input type="radio" name="attribute_pa_size" id="pa-size4" value="XS">
+                                <span>XS</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div class="description-nav">
+                <a href="" class="description-link desc-link-sizes active">Размерная сетка</a>
+                <a href="" class="description-link desc-link-info">Описание и уход</a>
             </div>
-            <div class="product-attr">
-                <div class="pa-title">Размер</div>
-                <div class="pa-values">
-                    <div class="pa-value">L</div>
-                    <div class="pa-value">M</div>
-                    <div class="pa-value">S</div>
-                    <div class="pa-value pa-value-not-stock">XS</div>
+            
+            <div class="description__blocks">
+                <div class="description-item active">
+                        <div class="product-size">
+                            <div class="ps-title">Размер</div>
+                            <div class="ps-values">
+                                <div>XXS</div>
+                                <div>XS</div>
+                                <div>S</div>
+                                <div>M</div>
+                                <div>L</div>
+                            </div>
+                        </div>
+                        <div class="product-size">
+                            <div class="ps-title">Обхват талии</div>
+                            <div class="ps-values">
+                                <div>60-64</div>
+                                <div>62-64</div>
+                                <div>65-68</div>
+                                <div>69-73</div>
+                                <div>74-76</div>
+                            </div>
+                        </div>
+                        <div class="product-size">
+                            <div class="ps-title">Размер</div>
+                            <div class="ps-values">
+                                <div>90-94</div>
+                                <div>91-93</div>
+                                <div>94-96</div>
+                                <div>97-100</div>
+                                <div>101-104</div>
+                            </div>
+                        </div>
+                </div>
+                <div class="description-item">
+                    <div class="description-item-info">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias numquam dolorem odio at ratione non dolores ipsa quas asperiores laboriosam, quam sit eveniet vel aliquid cupiditate nemo nesciunt ut harum!
+                    </div>
                 </div>
             </div>
 
-            <div class="product-attr desc">
-                <div class="pa-title">Размерная сетка</div>
-                <div class="pa-values">
-                    <div class="pa-desc">
-                        Описание и уход
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-sizes">
-                <div class="product-size">
-                    <div class="ps-title">Размер</div>
-                    <div class="ps-values">
-                        <div>XXS</div>
-                        <div>XS</div>
-                        <div>S</div>
-                        <div>M</div>
-                        <div>L</div>
-                    </div>
-                </div>
-                <div class="product-size">
-                    <div class="ps-title">Обхват талии</div>
-                    <div class="ps-values">
-                        <div>60-64</div>
-                        <div>62-64</div>
-                        <div>65-68</div>
-                        <div>69-73</div>
-                        <div>74-76</div>
-                    </div>
-                </div>
-                <div class="product-size">
-                    <div class="ps-title">Размер</div>
-                    <div class="ps-values">
-                        <div>90-94</div>
-                        <div>91-93</div>
-                        <div>94-96</div>
-                        <div>97-100</div>
-                        <div>101-104</div>
-                    </div>
-                </div>
-            </div>
+          
 
             <div class="product-relates">
                 <div class="pr-title">
                     Сочетай с
                 </div>
-                <div class="pr-values">
-                    <div class="pr-value">
+                <div class="good-line">
+                    <a href="" class="good-item">
                         <img src="img/product1m.jpg" alt="">
-                    </div>
-                    <div class="pr-value">
-                        <img src="img/product2m.jpg" alt="">
-                    </div>
-                    <div class="pr-value">
-                        <img src="img/product3m.jpg" alt="">
-                    </div>
-                    <div class="pr-value">
-                        <img src="img/product4m.jpg" alt="">
-                    </div>
+                    </a>
+                    <a href="" class="good-item">
+                        <img src="img/product1m.jpg" alt="">
+                    </a>
+                    <a href="" class="good-item">
+                        <img src="img/product1m.jpg" alt="">
+                    </a>
+                    <a href="" class="good-item">
+                        <img src="img/product1m.jpg" alt="">
+                    </a>
                 </div>
             </div>
         </div>

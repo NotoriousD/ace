@@ -66,7 +66,7 @@
     font-weight: 400;
     font-size: 12px;
     color: $text;
-    font-family: $anonymous-pro;
+    font-family: $default-font;
   }
   .old-price{
     position: absolute;
@@ -141,15 +141,21 @@
     align-items: center;
     padding: 21px 30px;
     transition: $transition;
-    span{
-      font-size: 12px;
+    font-size: 12px;
+    .product__name{
+      width: 60%;
       display: block;
-      &:first-child{
-        width: 70%;
-      }
-      &:last-child{
-        width: 30%;
-        text-align: right;
+    }
+    .product__price{
+      display: block;
+      width: 40%;
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      .old-p{
+        text-decoration: line-through;
+        opacity: .7;
       }
     }
   }
@@ -174,5 +180,30 @@
     .swiper-pagination-bullet.swiper-pagination-bullet-active{
       background-color: $text;
     }
+  }
+}
+
+.remove-catalog-btn{
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 16px;
+  right: 28px;
+  background-size: 100%;
+  z-index: 1;
+  cursor: pointer;
+  .simplefavorite-button{
+    width: 12px;
+    height: 12px;
+    border: none;
+    background-image: url(../img/icons/close.svg);
+    padding: 0;
+    display: block;
+    opacity: 1;
+    z-index: 1;
+    background-size: 100%;
+    position: relative;
+    left: 0;
+    top: 0;
   }
 }

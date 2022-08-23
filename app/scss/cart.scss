@@ -54,9 +54,14 @@
   margin-bottom: 4px;
   a{
     display: block;
+    position: relative;
+    height: clamp(615px, 50vw ,562px);
   }
   img{
     width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
   }
   @media(max-width: 765px){
     width: 50%;
@@ -100,10 +105,19 @@
   position: absolute;
   left: 22px;
   bottom: 10px;
+  width: 45%;
 }
 .cc-item-price{
   left: auto;
   right: 22px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  .old-price{
+    text-decoration: line-through;
+    opacity: .7;
+    margin-right: 20px;
+  }
 }
 
 .cart-footer{
@@ -121,4 +135,14 @@
       color: $white;
     }
   }
+}
+
+.choosen-title{
+  text-align: center;
+  padding-top: min(94px, 3vw);
+  padding-bottom: min(73px, 3vw);;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: $black;
 }

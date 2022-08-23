@@ -1,5 +1,13 @@
 @import "_mixins/font-face";
 
-@include font-face("Formular", "../fonts/Formular/Formular");
-@include font-face("Formular", "../fonts/Formular/Formular-Medium", 500);
-@include font-face("Formular", "../fonts/Formular/Formular-Bold", 700);
+// @include font-face("Formular", "../fonts/Formular/Formular");
+// @include font-face("Formular", "../fonts/Formular/Formular-Medium", 500);
+// @include font-face("Formular", "../fonts/Formular/Formular-Bold", 700);
+
+
+
+
+@include font-face("Helvetica Now Display", "../fonts/Helvetica/HelveticaNowDisplay-Regular");
+@include font-face("Helvetica Now Display", "../fonts/Helvetica/HelveticaNowDisplay-Medium", 500);
+@include font-face("Helvetica Now Display", "../fonts/Helvetica/HelveticaNowDisplay-Bold", 700);
+@include font-face("Helvetica Now Display", "../fonts/Helvetica/HelveticaNowDisplay-Black", 900);

@@ -133,11 +133,22 @@ transition: background-color 5000s ease-in-out 0s;
 	}
 }
 
+.title-h3{
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+	margin-bottom: 30px;
+}
+
 .body-wrapper{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	height: 100vh;
+	min-height: 100vh;
+}
+
+main{
+	min-height: calc(100vh - 50px);
 }
 
 @import "parts/global";
@@ -153,4 +164,5 @@ transition: background-color 5000s ease-in-out 0s;
 @import "parts/address-page";
 @import "parts/checkout-page";
 @import "parts/footer";
+@import "parts/modal";
 @import "media"; // Always at the end
